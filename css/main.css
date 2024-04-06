@@ -9,7 +9,6 @@ body
 {
     background: rgb(159, 74, 32);
     height: 100vh;
-    overflow: hidden;
 }
 
 .inv-area
@@ -49,9 +48,8 @@ body
 
 .user_img
 {
-    max-width: 50%;
+    max-width: 60%;
     margin: 2%;
-    width: 100%;
     border-radius: 12px;
 }
 
@@ -64,8 +62,10 @@ body
 {
     display: grid;
     background-color: rgb(240, 240, 240);
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1%;
     padding: 1%;
+    max-height: 90%;
     max-width: 95%;
     width: 100%;
 }
@@ -73,6 +73,9 @@ body
 .caracter input
 {
     width: 100%;
+    max-width: 95%;
+    max-height: 90%;
+    height: 50%;
     color: rgb(169, 13, 13);
     padding: 4%;
     margin-right: 3%;
@@ -99,31 +102,53 @@ body
     width: 100%;
     padding: 2%;
     display: grid;
-    grid-template-columns: repeat(3, 1.5fr);
+    grid-gap: 10% 1%;
     position: relative;
-    background-color: rgb(130, 82, 82);
+    grid-template-columns: 3fr 3fr 3fr;
 }
 @media (max-width: 319px)
 {
     .char-status
     {
-        grid-template-columns: repeat(2, 1.5fr);
+        grid-template-columns: 2fr 1fr;
         font-size: 50%;
     }
 }
+
+/* QUADRO DE HABILIDADES GERAIS DO PERSONAGEM  */
+
 .status
 {
-    background-color: rgb(233, 115, 19);
-    color: white;
+    background-color: rgb(202, 39, 39);
+    outline: 3px solid rgb(43, 43, 43);    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     border-radius: 8px;
-    height: 90%;
-    max-width: 90%;
-    margin: 4%;
+    color: #e6e4d3;
+    max-height: 18vh;
+    max-width: 95%;
     padding: 5%;	
-    outline: 3px solid rgb(80, 80, 80);    
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    height: 90%;
+    width: 95%;
+    margin: 4%;
 }
+
+.status h3
+{
+    font-size: 135%;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.ponts
+{
+    color: rgb(255, 207, 32);
+    font-size: clamp(10%, 100%, 100%);
+    padding-bottom: -20%;
+}
+
+
 
 .status-int, .status-cons
 {
@@ -132,7 +157,112 @@ body
 
 tr
 {
-    width: 100%;
-    max-width: 95%;
-    font-size: clamp(70%, 80%, 200%);
+    text-align: center;
+    font-size: clamp(70%, 100%, 200%);
+}
+
+
+/* -------------- ---------- INVENTARIO DO PERSONAGEM ------- ---------------  */
+
+.bag
+{
+    width: 95%;
+    height: 20vh;
+    position: relative;
+}
+
+.bag-coin
+{
+    position: relative;
+    display: flex;
+}
+
+.img-bag_coin
+{
+    width: 15%;
+    max-width: 90px;
+    top: 20px;
+    border: 5px solid  rgb(180, 230, 178);
+    border-radius: 90px;
+    position: absolute;
+    z-index: 1;
+}
+
+.bg-alert
+{
+    position: relative;
+    width: 29%;
+    height: 8vh;
+    outline: 1px solid rgb(137, 127, 127);
+    color: rgb(146, 17, 17);
+    background-color: rgb(180, 230, 178);
+    left: 10%;
+    transform: translateY(60%);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    z-index: 0;
+}
+
+.bag-money
+{
+    color: rgb(70, 69, 69);
+    text-align: center;
+    transform: translate(-10%, 95%);
+    font-size: clamp(10%, 100%, 100%);
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-shadow: -5px 7px 5px rgb(145, 145, 145);
+}
+
+
+/* --------------- -- MEDIA QUERY -- ---------------------- */
+
+
+@media(max-width: 476px)
+{
+    .status h3
+    {
+        font-size: 98%;
+    }
+}
+
+@media(max-width: 371px)
+{
+    .status h3
+    {
+        font-size: 93%;
+    }
+}
+
+@media(max-width: 356px)
+{
+    .status h3
+    {
+        font-size: 91%;
+    }
+
+}
+
+@media(max-width: 351px)
+{
+    .status h3
+    {
+        font-size: 90%;
+    }
+}
+
+@media(max-width: 321px)
+{
+    .status h3
+    {
+        font-size: 87%;
+    }
+}
+
+@media(max-width: 307px)
+{
+    .status h3
+    {
+        font-size: 87%;
+    }
 }
