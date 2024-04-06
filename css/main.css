@@ -1,0 +1,113 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: rgb(159, 74, 32);
+    height: 100vh;
+}
+
+.inv-area
+{
+    display: inline-block;
+    background-color: rgb(54, 48, 48);
+    position: relative;
+    width: 95vw;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 3%;
+    margin: 0 auto;
+}
+
+.user-info
+{
+    display: flex;
+}
+
+.inv
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    height: 50%;
+}
+
+.inv-img
+{
+    max-width: 50%;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.user_img
+{
+    max-width: 50%;
+    margin: 2%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.user-name
+{
+    color: whitesmoke;
+}
+
+.user-status
+{
+    display: grid;
+    background-color: rgb(240, 240, 240);
+    grid-template-columns: repeat(2, 2fr);
+    padding: 1%;
+    max-width: 95%;
+    width: 100%;
+}
+
+.caracter input
+{
+    width: 100%;
+    padding: 2%;
+}
+
+.inv-status , .inv-itens
+{
+    background: whitesmoke;
+    padding: 1%;
+    max-width: 45%;
+    width: 100%;
+    border: 1px solid rgb(71, 71, 71);
+}
+
+.char-status
+{
+    width: 100%;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1.5fr);
+    position: relative;
+    background-color: rgb(130, 82, 82);
+}
+
+.status
+{
+    background-color: rgb(233, 115, 19);
+    color: white;
+    border-radius: 12px;
+    height: 90%;
+    margin: 4%;
+    padding: 5%;	
+    outline: 3px solid rgb(80, 80, 80);    
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.status-int, .status-cons
+{
+    transform: translate(50%, 20%); 
+}
