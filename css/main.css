@@ -7,14 +7,18 @@
 
 body
 {
-    background: rgb(159, 74, 32);
     height: 100vh;
+}
+
+hr
+{
+    margin: 8% auto;
 }
 
 .inv-area
 {
     display: inline-block;
-    background-color: rgb(54, 48, 48);
+    background-color: rgb(58, 58, 58);
     position: relative;
     width: 95vw;
     justify-content: center;
@@ -43,7 +47,6 @@ body
     max-width: 50%;
     display: inline-block;
     text-align: center;
-    border: 1px solid black;
 }
 
 .user_img
@@ -116,7 +119,6 @@ body
 }
 
 /* QUADRO DE HABILIDADES GERAIS DO PERSONAGEM  */
-
 .status
 {
     background-color: rgb(202, 39, 39);
@@ -163,7 +165,6 @@ tr
 
 
 /* -------------- ---------- INVENTARIO DO PERSONAGEM ------- ---------------  */
-
 .bag
 {
     width: 95%;
@@ -180,27 +181,43 @@ tr
 .img-bag_coin
 {
     width: 15%;
-    max-width: 90px;
-    top: 20px;
+    max-width: 120px;
+    top: 15%;
     border: 5px solid  rgb(180, 230, 178);
     border-radius: 90px;
     position: absolute;
     z-index: 1;
+    transition: all ease-in-out 0.4s;
+}
+
+.img-bag_coin:hover
+{
+    width: 16%; 
 }
 
 .bg-alert
 {
-    position: relative;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
     width: 29%;
     height: 8vh;
+    opacity: 0;
     outline: 1px solid rgb(137, 127, 127);
     color: rgb(146, 17, 17);
-    background-color: rgb(180, 230, 178);
+    background-color: rgb(230, 233, 230);
     left: 10%;
-    transform: translateY(60%);
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+    top: 27%;
+    border-top-right-radius: 120%;
+    border-bottom-right-radius: 120%;
+    transition: all ease-in-out 0.4s;
     z-index: 0;
+    
+}
+
+.sbow
+{
+    opacity: 1;
 }
 
 .bag-money
@@ -214,9 +231,91 @@ tr
     text-shadow: -5px 7px 5px rgb(145, 145, 145);
 }
 
+/* -------- ----------- HEALTH AND MANA  ------------- ----------- - */
+.health-mana
+{
+    max-width: 95%;
+    padding: 1%;
+    text-align: center;
+    color: white;
+
+}
+
+.img-mana-pv
+{
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 5%;
+}
+
+.pv
+{
+    background-color: rgb(232, 28, 28);
+    max-width: 80%;
+    height: 100%;
+    margin-left: 20%;
+    margin-right: 10%;
+    border-radius: 12px;
+}
+
+.pv img
+{
+    width: 40%;
+}
+
+.pm
+{
+    background-color: rgb(9, 96, 173);
+    max-width: 80%;
+    border-radius: 12px;
+}
+
+.pm img
+{
+    width: 52%;
+}
+
+
+/* --------- -----------  COMBAT STATUS ----------- ---------------- -  */
+.combat-status
+{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+.status-box
+{
+    padding: 3%;
+    width: calc((100% - 10%) / 2 );
+    height: 50%;
+    background-color: rgb(24, 144, 22);
+    border-radius: 8px;
+    text-align: center;
+    color: rgb(220, 193, 20);
+}
+
+.status-box img
+{
+    width: 50%;
+}
 
 /* --------------- -- MEDIA QUERY -- ---------------------- */
 
+   
+@media(min-width: 900px)
+{
+    .bg-alert
+    {
+        left: 5%;
+        top: 35%;
+        height: 9vh;
+    }
+}
 
 @media(max-width: 476px)
 {
